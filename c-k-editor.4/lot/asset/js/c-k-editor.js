@@ -1,10 +1,6 @@
-(function(win, doc) {
+(function(win, doc, _) {
 
-    var body = doc.body,
-        contents = doc.querySelectorAll('.field\\:c-k-editor textarea'),
-        state;
-
-    if (!contents.length) return;
+    var body = doc.body, state;
 
     function hex(rgb) {
         if (-1 === rgb.search('rgb')) {
@@ -19,34 +15,40 @@
         return '#' + x(rgb[1]) + x(rgb[2]) + x(rgb[3]);
     }
 
-    contents.forEach(function($) {
-        state = JSON.parse($.getAttribute('data-state') || '{}');
-        if (!state.height) {
-            var $$ = $.cloneNode(), height;
-            body.appendChild($$);
-            $$.style.display = 'block';
-            $$.style.visibility = 'visible';
-            height = $$.offsetHeight; // Get hidden `<textarea>` height
-            $$.parentNode && body.removeChild($$);
-            state.height = height * 1.5;
-        }
-        if (!state.uiColor) {
-            state.uiColor = hex(win.getComputedStyle($).getPropertyValue('background-color'));
-        }
-        if (!state.allowedContent) {
-            state.allowedContent = {
-                $1: {
-                    elements: CKEDITOR.dtd,
-                    attributes: true,
-                    styles: true,
-                    classes: true
-                },
-                'table thead tbody tfoot tr th td': {
-                    attributes: 'class,id,style,summary'
-                }
-            };
-        }
-        CKEDITOR.replace($, state);
-    });
+    function onChange() {
+        var contents = doc.querySelectorAll('.field\\:c-k-editor textarea');
+        if (!contents.length) return;
+        contents.forEach(function($) {
+            state = JSON.parse($.getAttribute('data-state') || '{}');
+            if (!state.height) {
+                var $$ = $.cloneNode(), height;
+                body.appendChild($$);
+                $$.style.display = 'block';
+                $$.style.visibility = 'visible';
+                height = $$.offsetHeight; // Get hidden `<textarea>` height
+                $$.parentNode && body.removeChild($$);
+                state.height = height * 1.5;
+            }
+            if (!state.uiColor) {
+                state.uiColor = hex(win.getComputedStyle($).getPropertyValue('background-color'));
+            }
+            if (!state.allowedContent) {
+                state.allowedContent = {
+                    $1: {
+                        elements: CKEDITOR.dtd,
+                        attributes: true,
+                        styles: true,
+                        classes: true
+                    },
+                    'table thead tbody tfoot tr th td': {
+                        attributes: 'class,id,style,summary'
+                    }
+                };
+            }
+            CKEDITOR.replace($, state);
+        });
+    } onChange();
 
-})(window, document);
+    _.on('change', onChange);
+
+})(window, document, _);

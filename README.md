@@ -6,6 +6,10 @@ CKEditor 4 Extension for Mecha
 Release Notes
 -------------
 
+### 2.0.1
+
+ - Added ability to reload CKEditor instance on every page load event by AJAX request.
+
 ### 2.0.0
 
  - Initial stable release for Mecha 2.2.0.
