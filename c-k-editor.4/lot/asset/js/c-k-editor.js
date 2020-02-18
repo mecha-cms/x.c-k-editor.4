@@ -16,7 +16,11 @@
     }
 
     function onChange() {
-        var contents = doc.querySelectorAll('.field\\:c-k-editor textarea');
+        for (var k in CKEDITOR.instances) {
+            CKEDITOR.instances[k].destroy(true); // Destroy!
+            delete CKEDITOR.instances[k];
+        }
+        var contents = doc.querySelectorAll('.field\\:c-k-editor textarea'), $$;
         if (!contents.length) return;
         contents.forEach(function($) {
             state = JSON.parse($.getAttribute('data-state') || '{}');
@@ -45,7 +49,10 @@
                     }
                 };
             }
-            CKEDITOR.replace($, state);
+            $$ = CKEDITOR.replace($, state);
+            $$.on('blur', function() {
+                this.updateElement(); // Update `<textarea>` value on blur
+            });
         });
     } onChange();
 
