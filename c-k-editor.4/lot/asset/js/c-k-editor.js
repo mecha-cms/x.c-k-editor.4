@@ -1,6 +1,6 @@
 (function(win, doc, _) {
 
-    var body = doc.body, state;
+    let body = doc.body, state;
 
     function hex(rgb) {
         if (-1 === rgb.search('rgb')) {
@@ -16,22 +16,24 @@
     }
 
     function onChange() {
-        for (var k in CKEDITOR.instances) {
+        let contents = doc.querySelectorAll('.field\\:c-k-editor textarea');
+        if (!contents.length) {
+            return;
+        }
+        for (let k in CKEDITOR.instances) {
             CKEDITOR.instances[k].destroy(true); // Destroy!
             delete CKEDITOR.instances[k];
         }
-        var contents = doc.querySelectorAll('.field\\:c-k-editor textarea'), $$;
-        if (!contents.length) return;
         contents.forEach(function($) {
             state = JSON.parse($.getAttribute('data-state') || '{}');
             if (!state.height) {
-                var $$ = $.cloneNode(), height;
+                let $$ = $.cloneNode(), height;
                 body.appendChild($$);
                 $$.style.display = 'block';
                 $$.style.visibility = 'visible';
                 height = $$.offsetHeight; // Get hidden `<textarea>` height
                 $$.parentNode && body.removeChild($$);
-                state.height = height * 1.5;
+                state.height = height;
             }
             if (!state.uiColor) {
                 state.uiColor = hex(win.getComputedStyle($).getPropertyValue('background-color'));
@@ -49,9 +51,8 @@
                     }
                 };
             }
-            $$ = CKEDITOR.replace($, state);
-            $$.on('blur', function() {
-                this.updateElement(); // Update `<textarea>` value on blur
+            CKEDITOR.replace($, state).on('change', function() {
+                this.updateElement(); // Update `<textarea>` value on change
             });
         });
     } onChange();

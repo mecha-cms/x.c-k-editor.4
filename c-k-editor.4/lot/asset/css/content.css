@@ -38,18 +38,22 @@ em, i {
 }
 
 blockquote {
+  font: inherit;
   font-style: italic;
+  font-size: 120%;
   margin: 0;
   padding: 0;
-  font-size: 120%;
+  border: 0;
 }
 
 .cke_contents_ltr blockquote {
   padding-left: 1em;
+  border-left-width: 0;
 }
 
 .cke_contents_rtl blockquote {
   padding-right: 1em;
+  border-right-width: 0;
 }
 
 a {
