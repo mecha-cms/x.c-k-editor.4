@@ -59,4 +59,4 @@
 
     _.on('change', onChange);
 
-})(window, document, _);
+})(this, this.document, this._);
