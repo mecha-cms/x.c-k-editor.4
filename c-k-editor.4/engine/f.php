@@ -7,7 +7,7 @@ function Field__CKEditor($in, $key) {
         'customConfig' => false,
         'stylesSet' => false,
         'language' => explode('-', $state->language, 2)[0],
-        'filebrowserImageBrowseUrl' => $url . $_['/'] . '::g::/asset' . (1 !== $user->status ? '/' . $user->key : ""),
+        'filebrowserImageBrowseUrl' => $url . $_['/'] . '/::g::/asset' . (1 !== $user->status ? '/' . $user->key : ""),
         'filebrowserImageUploadUrl' => $url . '/.c-k-editor/blob/' . $user->token,
         'contentsCss' => \To::URL($f = __DIR__ . \DS . '..' . \DS . 'lot' . \DS . 'asset' . \DS . 'css' . \DS . 'content' . (\defined("\\DEBUG") && \DEBUG ? "" : '.min') . '.css') . '?v=' . \dechex(\filemtime($f))
     ], require __DIR__ . DS . '..' . DS . 'state' . DS . 'editor.php', $in['state'] ?? []);

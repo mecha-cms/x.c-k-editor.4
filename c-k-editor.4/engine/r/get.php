@@ -2,7 +2,7 @@
 
 if (isset($_GET['CKEditor'])) {
     Hook::set('_', function($_) {
-        if ('g' === $_['task'] && 0 === strpos($_['path'] . '/', '/asset/')) {
+        if ('g' === $_['task'] && 0 === strpos($_['path'] . '/', 'asset/')) {
             $_['lot']['bar']['hidden'] = true;
             $_['lot']['desk']['lot']['form']['lot'][0]['hidden'] = true;
             if (!empty($_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['files']['lot']['files']['lot'])) {
@@ -24,8 +24,8 @@ if (isset($_GET['CKEditor'])) {
     }, 20.1);
     Hook::set('get', function() {
         extract($GLOBALS);
-        if ('g' === $_['task'] && 0 === strpos($_['path'] . '/', '/asset/')) {
-            Asset::script('function insert(u){var w=window,o=w.opener;o.focus(),o.CKEDITOR.tools.callFunction(' . ($_GET['CKEditorFuncNum'] ?? 0) . ',u),w.close()}');
+        if ('g' === $_['task'] && 0 === strpos($_['path'] . '/', 'asset/')) {
+            Asset::script('function insert(u){var w=this,o=w.opener;o.focus(),o.CKEDITOR.tools.callFunction(' . ($_GET['CKEditorFuncNum'] ?? 0) . ',u),w.close()}');
         }
-    }, 20.1);
+    }, 20.2);
 }
