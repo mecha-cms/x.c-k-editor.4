@@ -6,6 +6,10 @@ CKEditor 4 Extension for Mecha
 Release Notes
 -------------
 
+### 2.1.0
+
+ - Updated for Panel 2.3.0.
+
 ### 2.0.2
 
  - Updated for Panel 2.2.1.
