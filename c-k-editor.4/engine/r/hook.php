@@ -1,6 +1,6 @@
-<?php
+<?php namespace _\lot\x\c_k_editor4\panel\page;
 
-Hook::set('_', function($_) {
+function fields($_) {
     $type = $_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['page']['lot']['fields']['lot']['type']['value'] ?? null;
     if (!$type || 'HTML' === $type || 'text/html' === $type) {
         // Replace field type to `c-k-editor` only for pages with type of `HTML` or `text/html`
@@ -10,4 +10,6 @@ Hook::set('_', function($_) {
         $_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['page']['lot']['fields']['lot']['type']['value'] = 'HTML';
     }
     return $_;
-});
+}
+
+\Hook::set('_', __NAMESPACE__ . "\\fields");
