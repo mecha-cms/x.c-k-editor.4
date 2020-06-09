@@ -1,6 +1,6 @@
 <?php namespace _\lot\x\panel\field;
 
-function CKEditor($in, $key) {
+function c_k_editor__4($in, $key) {
     extract($GLOBALS, \EXTR_SKIP);
     $out = \_\lot\x\panel\h\field($in, $key);
     $options = \array_replace([

@@ -8,7 +8,7 @@ Release Notes
 
 ### 2.1.0
 
- - Updated for Panel 2.3.0.
+ - Changed field type from `CKEditor` to `c-k-editor.4`.
 
 ### 2.0.2
 
