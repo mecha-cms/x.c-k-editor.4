@@ -6,6 +6,10 @@ CKEditor 4 Extension for Mecha
 Release Notes
 -------------
 
+### 2.1.1
+
+ - Updated to use the readable language string of blob response code.
+
 ### 2.1.0
 
  - Changed field type from `CKEditor` to `c-k-editor.4`.

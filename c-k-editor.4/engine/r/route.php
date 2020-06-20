@@ -22,7 +22,7 @@ Route::set('.c-k-editor/blob/:token', 200, function($token) {
             $out['url'] = To::URL($folder . DS . $name);
         } else if (is_int($response)) {
             $out['error']['code'] = $response;
-            $out['error']['message'] = i('#blob:' . $response);
+            $out['error']['message'] = i('Failed to upload with error code: ' . $response);
         } else {
             $out['uploaded'] = true;
             $out['url'] = To::URL($response);

@@ -4,7 +4,7 @@ description: CKEditor is a WYSIWYG rich text editor which enables writing conten
 author: Taufik Nurrohman
 type: Markdown
 link: 'https://github.com/ckeditor/ckeditor4'
-version: 2.1.0
+version: 2.1.1
 
 use:
   '.\lot\x\panel': 1
