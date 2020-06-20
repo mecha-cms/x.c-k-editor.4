@@ -8,7 +8,7 @@ Release Notes
 
 ### 2.1.1
 
- - Updated to use the readable language string of blob response code.
+ - Updated to use the improved default language string of blob response code.
 
 ### 2.1.0
 
