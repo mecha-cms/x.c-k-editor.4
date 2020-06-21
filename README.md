@@ -1,7 +1,7 @@
 CKEditor 4 Extension for Mecha
 ==============================
 
-![CKEditor 4](https://user-images.githubusercontent.com/1669261/74047159-76199700-4a02-11ea-9673-8f4aa7049f5e.png)
+![CKEditor 4](https://user-images.githubusercontent.com/1669261/85228767-b442b080-b40f-11ea-8b1c-8fbd899b1dc9.png)
 
 Release Notes
 -------------
