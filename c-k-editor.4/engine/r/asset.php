@@ -1,4 +1,15 @@
 <?php
 
-Asset::set(__DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . '@ckeditor' . DS . 'ckeditor4' . DS . 'ckeditor.js', 10);
-Asset::set(__DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . 'js' . DS . 'c-k-editor' . (defined('DEBUG') && DEBUG ? '.' : '.min.') . 'js', 20.1);
+$_['asset'][__DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . '@ckeditor' . DS . 'ckeditor4' . DS . 'ckeditor.js'] = [
+    'stack' => 10
+];
+
+$_['asset'][__DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . 'js' . DS . 'c-k-editor' . (defined('DEBUG') && DEBUG ? '.' : '.min.') . 'js'] = [
+    'stack' => 20.1
+];
+
+// Buggy! :(
+$_['asset']['style'][] = [
+    'content' => '.field .cke_chrome{width:100%!important}',
+    'stack' => 20
+];

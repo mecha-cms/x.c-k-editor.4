@@ -6,6 +6,10 @@ CKEditor 4 Extension for Mecha
 Release Notes
 -------------
 
+### 2.2.0
+
+ - Updated for Panel 2.5.0.
+
 ### 2.1.1
 
  - Updated to use the improved default language string of blob response code.

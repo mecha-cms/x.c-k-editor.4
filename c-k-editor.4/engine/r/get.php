@@ -3,13 +3,13 @@
 if (isset($_GET['CKEditor'])) {
     Hook::set('_', function($_) {
         if ('g' === $_['task'] && 0 === strpos($_['path'] . '/', 'asset/')) {
-            $_['lot']['bar']['hidden'] = true;
-            $_['lot']['desk']['lot']['form']['lot'][0]['hidden'] = true;
+            $_['lot']['bar']['skip'] = true;
+            $_['lot']['desk']['lot']['form']['lot'][0]['skip'] = true;
             if (!empty($_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['files']['lot']['files']['lot'])) {
                 foreach ($_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['files']['lot']['files']['lot'] as $k => &$v) {
                     $x = pathinfo($k, PATHINFO_EXTENSION);
-                    $v['tasks']['g']['hidden'] = true;
-                    $v['tasks']['l']['hidden'] = true;
+                    $v['tasks']['g']['skip'] = true;
+                    $v['tasks']['l']['skip'] = true;
                     $v['tasks']['insert'] = [
                         'icon' => 'M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z',
                         'title' => 'Insert',
