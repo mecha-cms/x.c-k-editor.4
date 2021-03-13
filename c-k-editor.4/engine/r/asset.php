@@ -1,10 +1,12 @@
 <?php
 
-$_['asset'][__DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . '@ckeditor' . DS . 'ckeditor4' . DS . 'ckeditor.js'] = [
+$_['asset']['panel.c-k-editor.4:0'] = [
+    'path' => __DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . '@ckeditor' . DS . 'ckeditor4' . DS . 'ckeditor.js',
     'stack' => 10
 ];
 
-$_['asset'][__DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . 'js' . DS . 'c-k-editor' . (defined('DEBUG') && DEBUG ? '.' : '.min.') . 'js'] = [
+$_['asset']['panel.c-k-editor.4:1'] = [
+    'path' => __DIR__ . DS . '..' . DS . '..' . DS . 'lot' . DS . 'asset' . DS . 'js' . DS . 'c-k-editor' . (defined('DEBUG') && DEBUG ? '.' : '.min.') . 'js',
     'stack' => 20.1
 ];
 
