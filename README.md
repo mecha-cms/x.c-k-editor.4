@@ -1,5 +1,5 @@
-CKEditor 4 Extension for Mecha
-==============================
+CKEditor 4 Extension for [Mecha](https://github.com/mecha-cms/mecha)
+====================================================================
 
 ![CKEditor 4](https://user-images.githubusercontent.com/1669261/85228767-b442b080-b40f-11ea-8b1c-8fbd899b1dc9.png)
 
