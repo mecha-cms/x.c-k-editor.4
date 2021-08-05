@@ -5,6 +5,7 @@ if (isset($_GET['CKEditor'])) {
         if ('g' === $_['task'] && 0 === strpos($_['path'] . '/', 'asset/')) {
             $_['lot']['bar']['skip'] = true;
             $_['lot']['desk']['lot']['form']['lot'][0]['skip'] = true;
+            $_['lot']['desk']['lot']['form']['lot'][2]['skip'] = true;
             if (!empty($_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['files']['lot']['files']['lot'])) {
                 foreach ($_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['files']['lot']['files']['lot'] as $k => &$v) {
                     $x = pathinfo($k, PATHINFO_EXTENSION);

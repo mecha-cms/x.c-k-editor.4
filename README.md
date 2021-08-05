@@ -1,13 +1,14 @@
 CKEditor 4 Extension for [Mecha](https://github.com/mecha-cms/mecha)
 ====================================================================
 
-![CKEditor 4](https://user-images.githubusercontent.com/1669261/85228767-b442b080-b40f-11ea-8b1c-8fbd899b1dc9.png)
+![CKEditor 4](https://user-images.githubusercontent.com/1669261/128368337-95843764-d080-403f-82e6-a58e14f02fca.png)
 
 Release Notes
 -------------
 
-### main
+### 2.3.0
 
+ - Updated for Panel 2.7.0.
  - [x] [@mecha-cms/mecha#96](https://github.com/mecha-cms/mecha/issues/96)
 
 ### 2.2.0

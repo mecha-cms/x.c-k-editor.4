@@ -16,7 +16,7 @@
     }
 
     function onChange() {
-        let contents = doc.querySelectorAll('.field\\:c-k-editor\\.4 textarea');
+        let contents = doc.querySelectorAll('.lot\\:field.type\\:c-k-editor\\.4 textarea');
         if (!contents.length) {
             return;
         }
