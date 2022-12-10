@@ -24,7 +24,7 @@
             CKEDITOR.instances[k].destroy(true); // Destroy!
             delete CKEDITOR.instances[k];
         }
-        contents.forEach(function($) {
+        contents.forEach(function ($) {
             state = JSON.parse($.getAttribute('data-state') || '{}');
             if (!state.height) {
                 let $$ = $.cloneNode(), height;
@@ -51,7 +51,7 @@
                     }
                 };
             }
-            CKEDITOR.replace($, state).on('change', function() {
+            CKEDITOR.replace($, state).on('change', function () {
                 this.updateElement(); // Update `<textarea>` value on change
             });
         });

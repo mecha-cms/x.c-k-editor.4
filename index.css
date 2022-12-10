@@ -1,4 +1,4 @@
-@import url('../@ckeditor/ckeditor4/contents.css?v=0');
+@import url('engine/vendor/@ckeditor/ckeditor4/contents.css?v=0');
 
 html {
   margin: 0;
