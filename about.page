@@ -72,7 +72,7 @@ You might need to add some special treatment to the generated HTML markup:
 
 #### Languages
 
-All language files stored in `.\lot\x\c-k-editor.4\lot\asset\@ckeditor\ckeditor4\lang` and `.\lot\x\c-k-editor.4\lot\asset\@ckeditor\ckeditor4\plugins\*\lang` folders has been removed except `en.js` to reduce the file size.
+All language files stored in `.\lot\x\c-k-editor.4\engine\vendor\@ckeditor\ckeditor4\lang` and `.\lot\x\c-k-editor.4\engine\vendor\@ckeditor\ckeditor4\plugins\*\lang` folders has been removed except `en.js` to reduce the file size.
 
 #### Codes
 
