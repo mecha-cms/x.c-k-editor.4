@@ -20,6 +20,7 @@
         if (!contents.length) {
             return;
         }
+        let isDark = doc.documentElement.classList.contains('is:dark');
         for (let k in CKEDITOR.instances) {
             CKEDITOR.instances[k].destroy(true); // Destroy!
             delete CKEDITOR.instances[k];
@@ -50,6 +51,10 @@
                         attributes: 'class,id,style,summary'
                     }
                 };
+            }
+            // Implement dark mode
+            if (isDark) {
+                CKEDITOR.addCss('html{background:' + hex(win.getComputedStyle($).getPropertyValue('background-color')) + ';color:' + hex(win.getComputedStyle($).getPropertyValue('color')) + '}');
             }
             CKEDITOR.replace($, state).on('change', function () {
                 this.updateElement(); // Update `<textarea>` value on change

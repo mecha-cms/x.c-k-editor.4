@@ -109,20 +109,20 @@ img {
   height: auto;
 }
 
-.table {
+table {
   border: 0;
   border-collapse: separate;
 }
 
-.table td,
-.table th {
+table td,
+table th {
   border: 1px dotted #999;
   padding: .5em 1em;
   text-align: inherit;
   vertical-align:top;
 }
 
-.table th {
+table th {
   font-weight: bolder;
 }
 

@@ -3,19 +3,18 @@ title: CKEditor 4
 description: Rich text editor.
 icon: 'M16.124 3.747a4.51 4.51 0 0 0-.47 2.009a4.53 4.53 0 0 0 4.529 4.528a4.447 4.447 0 0 0 .096-.001v6.34a2.13 2.13 0 0 1-1.065 1.846l-8.01 4.624a2.13 2.13 0 0 1-2.13 0L1.065 18.47A2.13 2.13 0 0 1 0 16.624V7.376a2.13 2.13 0 0 1 1.065-1.845L9.075.907a2.13 2.13 0 0 1 2.13 0zM5.733 7.975a.533.533 0 0 0-.533.533v.254c0 .294.239.533.533.533h8.996a.533.533 0 0 0 .533-.533v-.254a.533.533 0 0 0-.533-.533zm0 3.281a.533.533 0 0 0-.533.533v.254c0 .294.239.533.533.533h6.522a.533.533 0 0 0 .533-.533v-.254a.533.533 0 0 0-.533-.533zm0 3.281a.533.533 0 0 0-.533.533v.254c0 .294.239.533.533.533h8.996a.533.533 0 0 0 .533-.533v-.254a.533.533 0 0 0-.533-.533zm14.538-5.141a3.729 3.729 0 1 1 0-7.458a3.729 3.729 0 0 1 0 7.458zm.635-2.783h.393v-.59h-.397V4.139h-.814L18.92 6.001v.612h1.349v.6h.636zm-.632-1.727v1.137h-.693l.68-1.137Z'
 author: Taufik Nurrohman
+image: /lot/x/c-k-editor.4/index.png
 type: Markdown
 link: 'https://github.com/ckeditor/ckeditor4'
 version: 3.0.0
 
 alert:
   stale:
-  - 'This extension is considered obsolete and should not be used anymore. This extension was last updated to work with [Panel](https://github.com/mecha-cms/x.panel) version 3.0.0, but due to changes to the CSS system on the Panel side and the non-specific CSS system on the CKEditor 4 side makes the editor appearance messy because its CSS system mixes with the CSS system from the Panel.'
+  - 'This extension is now obsolete due to the lack of native dark mode feature. It will be replaced by [CKEditor 5](https://github.com/mecha-cms/x.c-k-editor) extension in the future. This extension was last updated to work with [Panel](https://github.com/mecha-cms/x.panel) version 3.0.0 and that’s it. I’ll leave this up to the contributors if they want to keep this extension compatible with future versions of Panel.'
 
 use:
   '.\lot\x\panel': 1
 ...
-
-![CKEditor 4](https://user-images.githubusercontent.com/1669261/128368337-95843764-d080-403f-82e6-a58e14f02fca.png)
 
 This extension works only for pages with `type` of `HTML` or `text/html`.
 
