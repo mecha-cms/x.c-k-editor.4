@@ -1,0 +1,9 @@
+{
+  "abandoned": "mecha-cms/x.c-k-editor",
+  "description": "Rich text editor.",
+  "license": "GPL-3.0-or-later",
+  "name": "mecha-cms/x.c-k-editor.4",
+  "require": {
+    "mecha-cms/x.panel": "^3.0.0"
+  }
+}
