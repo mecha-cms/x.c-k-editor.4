@@ -12,9 +12,6 @@ version: 3.0.0
 alert:
   stale:
   - 'This extension is now obsolete due to the lack of native dark mode feature. It will be replaced by [CKEditor 5](https://github.com/mecha-cms/x.c-k-editor) extension in the future. This extension was last updated to work with [Panel](https://github.com/mecha-cms/x.panel) version 3.0.0 and that’s it. I’ll leave this up to the contributors if they want to keep this extension compatible with future versions of Panel.'
-
-use:
-  '.\lot\x\panel': 1
 ...
 
 This extension works only for pages with `type` of `HTML` or `text/html`.
