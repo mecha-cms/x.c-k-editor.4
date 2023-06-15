@@ -34,7 +34,7 @@ namespace x\panel\task\fire {
     }
 }
 
-namespace x\panel\type\field {
+namespace x\panel\lot\type\field {
     function c_k_editor__4($value, $key) {
         \extract($GLOBALS, \EXTR_SKIP);
         $value['state'] = \array_replace([
@@ -56,6 +56,6 @@ namespace x\panel\type\field {
             ])]),
             'stylesSet' => false
         ], require __DIR__ . \D . '..' . \D . 'state' . \D . 'c-k-editor.4.php', $value['state'] ?? []);
-        return \x\panel\type\field\content($value, $key);
+        return \x\panel\lot\type\field\content($value, $key);
     }
 }
