@@ -46,6 +46,9 @@ if ('GET' === $_SERVER['REQUEST_METHOD']) {
             ];
 // Buggy! :(
 $style = <<<CSS
+.lot\:field .cke_button {
+  cursor: default;
+}
 .lot\:field .cke_chrome {
   width: 100%;
 }
