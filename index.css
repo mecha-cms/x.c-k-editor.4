@@ -1,13 +1,15 @@
 @import url('engine/vendor/@ckeditor/ckeditor4/contents.css?v=0');
 
 html {
-  margin: 0;
-  padding: 0;
-  font-family: Verdana, Geneva, 'Bitstream Vera Sans', sans-serif;
-  font-size: 13px;
-  line-height: 1.4;
   background: #fbfbfb;
   color: #000;
+  font-family: Verdana, Geneva, 'Bitstream Vera Sans', sans-serif;
+  font-size: 13px;
+  height: auto !important;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100% !important;
+  padding: 0;
 }
 
 html:focus-within {
@@ -15,18 +17,18 @@ html:focus-within {
 }
 
 body {
-  margin: 1.5em;
-  padding: 0;
-  font: inherit;
   background: none;
   color: inherit;
+  font: inherit;
+  margin: 1.5em;
+  padding: 0;
 }
 
 abbr {
   border: 0;
-  text-decoration: none;
   border-bottom: 1px dotted;
   cursor: help;
+  text-decoration: none;
 }
 
 b, strong {
@@ -38,22 +40,22 @@ em, i {
 }
 
 blockquote {
+  border: 0;
   font: inherit;
-  font-style: italic;
   font-size: 120%;
+  font-style: italic;
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
 .cke_contents_ltr blockquote {
-  padding-left: 1em;
   border-left-width: 0;
+  padding-left: 1em;
 }
 
 .cke_contents_rtl blockquote {
-  padding-right: 1em;
   border-right-width: 0;
+  padding-right: 1em;
 }
 
 a {
@@ -105,8 +107,8 @@ hr {
 
 img {
   display: inline-block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 table {
@@ -133,8 +135,8 @@ table th {
 
 .align-center {
   float: none;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .align-right {
@@ -148,32 +150,32 @@ code {
 }
 
 pre {
+  -moz-tab-size: 4;
   font: inherit;
+  tab-size: 4;
   white-space: pre-wrap;
   word-wrap: break-word;
-  -moz-tab-size: 4;
-  tab-size: 4;
 }
 
 pre code {
-  display: block;
   background: #000;
   color: #fff;
-  padding: .5em .75em;
+  display: block;
+  padding: 0.5em 0.75em;
 }
 
 pre .hljs {
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
 }
 
 figure {
-  text-align: center;
-  margin: 0;
-  padding: .5em;
   display: block;
+  margin: 0;
+  padding: 0.5em;
+  text-align: center;
 }
 
 figure > figcaption {
-  text-align: center;
   display: block;
+  text-align: center;
 }
